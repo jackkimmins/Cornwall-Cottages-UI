@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    AOS.init();
+    
     $(document).scroll(function() {
         if (0 == $(window).scrollTop())
         {
@@ -16,4 +18,9 @@ $(document).ready(function() {
             console.log('not top');
         }
     })
+
+    $('#btnShowMenu').click(function(e) {
+        e.preventDefault();
+        $('.menuItems').toggleClass('menuItems-mobile');
+    });
 });

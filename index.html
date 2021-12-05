@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cornwall Cottages</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/homepage.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
 <body>
-    <header>
+    <header data-aos="fade-down">
         <div class="top-bar">
             Welcome to Cornwall Cottages
         </div>
@@ -27,7 +28,7 @@
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
 
-                <ul>
+                <ul class="menuItems">
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -38,6 +39,7 @@
                 </ul>
 
                 <div class="other-options">
+                    <a id="btnShowMenu" href="#"><i class="fas fa-bars"></i> Menu</a>
                     <a href="booking.html"><i class="fas fa-sign-in-alt"></i> Booking</a>
                     <a href="login.html"><i class="fas fa-user"></i> Login</a>
                 </div>
@@ -63,13 +65,13 @@
 
         <div class="container">
             <div class="cards">
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <span>Unwind</span>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <span>Adventure</span>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <span>Enjoy</span>
                 </div>
             </div>   
@@ -83,6 +85,7 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/homepage.js"></script>
 </body>
 

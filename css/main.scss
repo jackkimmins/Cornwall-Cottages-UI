@@ -9,11 +9,42 @@
 	padding: 0;
 }
 
-
 body {
 	width: 100vw;
 	min-height: 100vh;
 
-
 	font-family: 'Roboto Slab', serif;
+}
+
+nav {
+	#btnShowMenu {
+		display: none;
+		z-index: 10;
+
+		&:hover {
+			color: black;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	nav {
+		#btnShowMenu {
+			display: inline;
+		}
+
+		.menuItems {
+			display: none;
+			transition: all 0.5s ease-in-out;
+		}
+
+		.menuItems-mobile {
+			display: block!important;
+			position: relative;
+	
+			li {
+				margin-bottom: 5px;
+			}
+		}
+	}
 }
