@@ -1,7 +1,7 @@
 $(document).ready(function() {
     AOS.init();
-    
-    $(document).scroll(function() {
+
+    function navbar() {
         if (0 == $(window).scrollTop())
         {
             $('.top-title').removeClass('top-title-sm');
@@ -17,10 +17,16 @@ $(document).ready(function() {
             
             console.log('not top');
         }
+    }
+    
+    $(document).scroll(function() {
+        navbar();
     })
 
     $('#btnShowMenu').click(function(e) {
         e.preventDefault();
         $('.menuItems').toggleClass('menuItems-mobile');
     });
+
+    navbar();
 });
