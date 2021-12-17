@@ -30,3 +30,9 @@ $(document).ready(function() {
 
     navbar();
 });
+
+$(function() {
+    $('.js_slider').lory({
+        infinite: 1
+    });
+});
