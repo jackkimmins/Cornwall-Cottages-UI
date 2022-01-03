@@ -177,6 +177,18 @@ section {
             margin: 1em auto 1em auto;
         }
 
+        hr:before {
+            content: '';
+            border-radius: 100%;
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background: white;
+            left: 50%;
+            margin: -6px;
+            box-shadow: inherit;
+        }
+
         p {
             font-size: 0.7em;
             font-family: 'Lora', serif;
@@ -348,7 +360,7 @@ section {
                 border: $bg-white solid 1.9vh;
     
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale(1.05) rotate(2deg);
                 }
             }
         }
@@ -374,8 +386,6 @@ section {
             display: flex;
             justify-content: center;
             align-items: center;
-
-            
     
             img {
                 float: left;
@@ -413,8 +423,87 @@ section {
     }
 }
 
-#test {
-    background-color: red;
+#reviews {
+    background-color: #cac7c7;
+    background-image: url(../img/dust.png);
+    background-size: cover;
+    min-height: auto;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8vh 0vh 8vh 0vh;
+
+    h5 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 4vh;
+        font-family: 'Roboto Slab', serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    .reviews-section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4vh;
+        align-items: center;
+    
+        .review {
+            background-color: rgba(92, 149, 235, 0.9);       
+            color: white;
+            padding: 25px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+
+            h6 {
+                font-size: 2rem;
+                font-weight: 600;
+                font-family: 'Roboto Slab', serif;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            .stars {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+
+                li {
+                    padding: 2px;
+                    color: yellow;
+                }
+            }
+
+            hr {
+                width: 80%;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                margin: 2vh auto 2vh auto;
+            }
+            
+            p {
+                letter-spacing: 0.04em;
+                line-height: 2.2vh;
+                font-family: 'Lora', serif;
+            }
+    
+            .reviews-image {
+                grid-area: 1 / 6 / -1 / -1;
+
+                img {
+                    width: 100%;
+                    transition: transform 0.4s ease-in-out;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+                    border: $bg-white solid 1.9vh;
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -424,6 +513,26 @@ footer {
     border-top: 2vh solid $bg-white;
 
     .container {
+        .to-top {
+            margin-top: 4vh;
+            width: 100%;
+            text-align: center;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.5em;
+                font-weight: 600;
+                letter-spacing: 2px;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $bg-white;
+                }
+            }
+        }
+
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 2fr; 
