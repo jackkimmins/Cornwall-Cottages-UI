@@ -409,12 +409,10 @@ section {
   line-height: 2.2vh;
   font-family: 'Lora', serif;
   color: white;
-  background-color: rgba(92, 149, 235, 0.9);
+  background-color: #5c95eb;
   padding: 25px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
 }
 
 #about .about-content .content .locations {
