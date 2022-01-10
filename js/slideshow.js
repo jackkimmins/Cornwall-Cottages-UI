@@ -154,7 +154,7 @@ renderer.setAnimationLoop(_ => {
     if (!shouldUpdate())
         return;
 
-    console.log("test")
+    // console.log("test")
 
     // shouldUpdate();
     lon += 0.02;
