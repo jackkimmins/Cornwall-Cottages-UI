@@ -1,6 +1,6 @@
 console.log("Loaded main.js");
 
-let lon = 90, lat = -20, phi = 0, theta = 0, fov = 60;
+let lon = 90, lat = (window.pageYOffset / 30) - 15, phi = 0, theta = 0, fov = 60;
 
 const element = document.getElementsByClassName("pano-slideshow")[0];
 let width = element.getBoundingClientRect().width;
@@ -132,7 +132,7 @@ function startSequence() {
     });
 }
 
-let latDirection = 0;
+// let latDirection = 0;
 let fovDirection = 0;
 
 
@@ -159,11 +159,11 @@ renderer.setAnimationLoop(_ => {
     // shouldUpdate();
     lon += 0.02;
 
-    if (lat > 6) {
-        latDirection += -0.000008;
-    } else if (lat < -18) {
-        latDirection += 0.000008;
-    }
+    // if (lat > 6) {
+    //     latDirection += -0.000008;
+    // } else if (lat < -18) {
+    //     latDirection += 0.000008;
+    // }
 
     if (fov > 90) {
         fovDirection += -0.00008;
@@ -171,7 +171,7 @@ renderer.setAnimationLoop(_ => {
         fovDirection += 0.00008;
     }
 
-    lat += latDirection;
+    // lat += latDirection;
     fov += fovDirection;
 
     camera.fov = fov;
@@ -203,3 +203,7 @@ renderer.setAnimationLoop(_ => {
 //     }
 //     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 //  }, false);
+
+document.body.onscroll = () => { 
+    lat = (window.pageYOffset / 20) - 15;
+}
